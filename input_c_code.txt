@@ -1,0 +1,3 @@
+for (int  i = 0; i < 10; i++) { if (i % 2 == 0) {printf(У%dФ, i);printf(У%dФ, i); } }  int main() { int i; for (i = 0; i < 5; i++) { if (i % 2 == 0) {printf("„исло %d четное\n", i);} else {printf("„исло %d нечетное\n", i);} } int j = 0; while (j < 3) { 
+
+if (j == 2) {printf("j равно 2\n");} j++; } int k = 5; do { if (k < 7) { printf("k меньше 7\n"); k++;} } while (k < 8); return 0; } 
