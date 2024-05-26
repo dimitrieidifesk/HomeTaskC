@@ -23,7 +23,7 @@ int main() {
     outputFile = fopen("output_c_code.txt", "w");
 
     if (inputFile == NULL || outputFile == NULL) {
-        printf("Ошибка при открытии файлов.\n");
+        printf("ГЋГёГЁГЎГЄГ  ГЇГ°ГЁ Г®ГІГЄГ°Г»ГІГЁГЁ ГґГ Г©Г«Г®Гў.\n");
         return 1;
     }
     int parenthesis = 0;
@@ -36,7 +36,7 @@ int main() {
         textArray = (char*)realloc(textArray, (arraySize + 1) * sizeof(char));
         textArray[arraySize++] = character;
     }
-    textArray = (char*)realloc(textArray, (arraySize + 1) * sizeof(char)); // адаптируем размер массива
+    textArray = (char*)realloc(textArray, (arraySize + 1) * sizeof(char)); 
     textArray[arraySize] = ' ';
     printArray(textArray, arraySize);
 
@@ -64,7 +64,6 @@ int main() {
 
     for (int i = 0; i < j; i++) {
         character = newTextArray[i];
-        // Если символ - открывающая фигурная скобка, делаем отступ
         if (character == '{') {
             brace += 1;
             fputc('{', outputFile);
@@ -74,7 +73,6 @@ int main() {
             }
             skip_space = 1;
         }
-        // Если символ - закрывающая фигурная скобка, переносим строку
         else if (character == '}') {
 
             fputc('\n', outputFile);
@@ -136,7 +134,7 @@ int main() {
     free(textArray);
     free(newTextArray);
 
-    printf("Программа успешно отредактирована.\n");
+    printf("Done\n");
 
     return 0;
 }
